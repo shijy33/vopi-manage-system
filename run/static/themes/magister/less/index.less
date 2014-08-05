@@ -1,0 +1,29 @@
+@import 'common.less';
+body {}
+nav#nav-menu { position:absolute; top:65%; margin-top:0; .box-shadow(none); /*border-top:2px solid rgb(209,200,182);*/
+	/*.navbar-nav li {
+		&.active a { border-top:0 none; border-bottom:5px solid rgba(149, 59, 57, 0.82719939); padding-top:16px; padding-bottom:11px; color:#fff;}
+		a { color:#fafafa;}
+	}*/
+}
+
+#carousel-index { height:65%; width:100%; overflow:hidden; position:absolute; top:0; z-index:0;
+	img { width:100%;}
+	ol.carousel-indicators { left:auto; right:2%; bottom:2%; width:auto;
+		li { .border-radius(3px); .opacity(50); margin-bottom:50px;}
+	}
+	.carousel-caption { width:auto; left:10%; text-align:left; margin-top:-170px; .transition(.6s ease-in-out left);
+        h3 { font-weight: normal; line-height: 200%;}
+    }
+	.cover { width:100%; height:80%; .background-liner-gradient(vertical, rgba(0,0,0,0), rgba(0,0,0,0.2819392)); position:absolute; top:50%;}
+	.carousel-control, .carousel-control:hover { background:none;}
+}
+
+#description {
+	.jumbotron { background:none; padding:20px; margin-bottom:0;
+		blockquote { font-size:14px;
+            ul { margin: 0; padding: 5px 15px;}
+            li { list-style: none; padding: 7px 0; line-height: 1.6em;}
+        }
+	}
+}

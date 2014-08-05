@@ -1,0 +1,16 @@
+            <ul class="nav navbar-nav">
+{foreach $_CATALOG as $catalog}
+                <li{if $catalog.active == TRUE} class="active"{/if}>
+{if $catalog.sub_catalogs != FALSE}
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="{$catalog.GUID}">{$catalog.title} <b class="caret"></b>{foreach $catalog.sub_catalogs as $sub}{if $sub.active == TRUE}&nbsp;&nbsp;&raquo;&nbsp;&nbsp;{$sub.title}{break}{/if}{/foreach}</a>
+                    <ul class="dropdown-menu">
+{foreach $catalog.sub_catalogs as $item}
+                        <li><a href="{$item.GUID}">{$item.title}</a></li>
+{/foreach}
+                    </ul>
+{else}
+                    <a href="{$catalog.GUID}">{$catalog.title}</a>
+{/if}
+                </li>
+{/foreach}
+            </ul>
