@@ -18,7 +18,7 @@ $runtime = new Runtime();
 
 $_conf = [
 	'scope'	=>	[
-		'magister'	=>	'/run/static/themes/magister/',
+		'apricot'	=>	'/run/static/themes/apricot/',
 	],
 	'content_type'	=>	[
 		'css'	=>	'text/css',
