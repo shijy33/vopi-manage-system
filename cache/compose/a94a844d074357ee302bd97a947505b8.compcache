@@ -130,9 +130,6 @@ $('.nav-toggle-alt').click(function() {
 $(".gone").click(function() {
     var collapse_content_close = $(this).attr('href');
     $(collapse_content_close).hide();
-
-
-
 });
 
 //tooltip
@@ -141,22 +138,6 @@ $('.tooltitle').tooltip();
 //Sliding Effect Control
 head.js("/static/themes/apricot/js/jquery-plugins/jquery.cookie.js");
 head.js("/static/themes/apricot/js/skin-select/skin-select.js");
-
-//Showing Date
-head.js("/static/themes/apricot/js/clock/date.js");
-
-//NEWS STICKER
-head.js("/static/themes/apricot/js/jquery-plugins/jquery.newsTicker.js", function() {
-
-    var nt_title = $('#nt-title').newsTicker({
-        row_height: 18,
-        max_rows: 1,
-        duration: 5000,
-        pauseOnHover: 0
-    });
-
-
-});
 
 //-------------------------------------------------------------
 
@@ -191,66 +172,10 @@ head.js("/static/themes/apricot/js/slidebars/slidebars.js", "/static/themes/apri
 
 //SEARCH MENU
 head.js("/static/themes/apricot/js/jquery-plugins/jquery.quicksearch.js", function() {
-
     $('input.id_search').quicksearch('#menu-showhide li, .menu-left-nest li');
-
-
-
 });
 //-------------------------------------------------------------
 
-
-
-//EASY PIE CHART
-head.js("/static/themes/apricot/js/jquery-plugins/jquery.easypiechart.js", function() {
-
-    $(function() {
-
-
-        $('.chart').easyPieChart({
-            easing: 'easeOutBounce',
-            trackColor: '#ffffff',
-            scaleColor: '#ffffff',
-            barColor: '#FF0064',
-            onStep: function(from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent));
-            }
-        });
-        var chart = window.chart = $('.chart').data('easyPieChart');
-        $('.js_update').on('click', function() {
-            chart.update(Math.random() * 100);
-        });
-
-        $('.speed-car').easyPieChart({
-            easing: 'easeOutBounce',
-            trackColor: 'rgba(0,0,0,0.3)',
-            scaleColor: 'transparent',
-            barColor: '#0085DF',
-
-            lineWidth: 8,
-            onStep: function(from, to, percent) {
-                $(this.el).find('.percent2').text(Math.round(percent));
-            }
-        });
-        var chart = window.chart = $('.chart2').data('easyPieChart');
-        $('.js_update').on('click', function() {
-            chart.update(Math.random() * 100);
-        });
-        $('.overall').easyPieChart({
-            easing: 'easeOutBounce',
-            trackColor: 'rgba(0,0,0,0.3)',
-            scaleColor: '#323A45',
-            lineWidth: 35,
-            lineCap: 'butt',
-            barColor: '#FFB900',
-            onStep: function(from, to, percent) {
-                $(this.el).find('.percent3').text(Math.round(percent));
-            }
-        });
-    });
-
-});
-//-------------------------------------------------------------
 
 //TOOL TIP
 
@@ -410,49 +335,6 @@ head.js("/static/themes/apricot/js/jquery-plugins/jquery.sparkline.js", function
 });
 
 //-------------------------------------------------------------
-
-//DIGITAL CLOCK
-head.js("/static/themes/apricot/js/jquery-plugins/jquery.clock.js", function() {
-
-    //clock
-    $('#digital-clock').clock({
-        offset: '+5',
-        type: 'digital'
-    });
-
-
-});
-
-
-//-------------------------------------------------------------
-
-head.js("/static/themes/apricot/js/gage/raphael.js", "/static/themes/apricot/js/gage/justgage.js", function() {
-
-
-
-    var g1;
-    window.onload = function() {
-        var g1 = new JustGage({
-            id: "g1",
-            value: getRandomInt(0, 1000),
-            min: 0,
-            max: 1000,
-            relativeGaugeSize: true,
-            gaugeColor: "rgba(0,0,0,0.4)",
-            levelColors: "#0DB8DF",
-            labelFontColor : "#ffffff",
-            titleFontColor: "#ffffff",
-            valueFontColor :"#ffffff",
-            label: "VISITORS",
-            gaugeWidthScale: 0.2,
-            donut: true
-        });
-    };
-
-
-
-});
-
 
 
 
